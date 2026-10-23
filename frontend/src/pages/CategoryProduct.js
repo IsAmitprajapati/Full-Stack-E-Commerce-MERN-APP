@@ -105,12 +105,12 @@ const CategoryProduct = () => {
 
                     <form className='text-sm flex flex-col gap-2 py-2'>
                         <div className='flex items-center gap-3'>
-                          <input type='radio' name='sortBy' checked={sortBy === 'asc'} onChange={handleOnChangeSortBy} value={"asc"}/>
+                          <input type='radio' name='sortBy' checked={sortBy === 'asc'} onChange={handleOnChangeSortBy} value={"asc"} className='cursor-pointer'/>
                           <label>Price - Low to High</label>
                         </div>
 
                         <div className='flex items-center gap-3'>
-                          <input type='radio' name='sortBy' checked={sortBy === 'dsc'} onChange={handleOnChangeSortBy} value={"dsc"}/>
+                          <input type='radio' name='sortBy' checked={sortBy === 'dsc'} onChange={handleOnChangeSortBy} value={"dsc"} className='cursor-pointer'/>
                           <label>Price - High to Low</label>
                         </div>
                     </form>
@@ -126,7 +126,7 @@ const CategoryProduct = () => {
                           productCategory.map((categoryName,index)=>{
                             return(
                               <div className='flex items-center gap-3'>
-                                 <input type='checkbox' name={"category"} checked={selectCategory[categoryName?.value]} value={categoryName?.value} id={categoryName?.value} onChange={handleSelectCategory} />
+                                 <input type='checkbox' name={"category"} checked={selectCategory[categoryName?.value]} value={categoryName?.value} id={categoryName?.value} onChange={handleSelectCategory} className='cursor-pointer'/>
                                  <label htmlFor={categoryName?.value}>{categoryName?.label}</label>
                               </div>
                             )
